@@ -2,6 +2,7 @@ import "dotenv/config"
 import express from 'express'
 import connectDB from "./config/database.js";
 import movieRouter from './routers/movie_router.js';
+import commentRouter from './routers/comment_router.js'
 
 
 const server = express();
@@ -16,6 +17,7 @@ server.get("/", (req, res) => {
 })
 
 server.use("/movies", movieRouter)
+server.use("/comments", commentRouter)
 
 server.listen(PORT, (req, res) => {
     console.log(`server is running on port:${PORT}`);

@@ -6,7 +6,7 @@ const commentSchema = new mongoose.Schema({
         required: true,
     },
     email: {
-        type: String,
+        type: String,  
         required: true,
     },
     //movie_id-mongoose object id
